@@ -1,0 +1,105 @@
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.debate-wrapper {
+  width: 100%;
+  min-height: 70vh;   
+  height: 70dvh;      
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-family: sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;  
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;       
+  overflow: hidden;
+  font-size: 14px;
+}
+#chat-container {
+  flex: 1;
+  width: 100%;
+  max-width: 700px;
+}
+/* CHAT BOX */
+.chat-box {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+/* INPUT ROW */
+.input-row {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button {
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#send-button {
+  background-color: #0B6DE0;
+  color: white;
+}
+#send-button:hover {
+  background-color: #04AA6D;
+}
+#submit-button,
+#Reset-button {
+  background-color: #e50000;
+  color: white;
+}
+
+	
+@media (max-width: 768px) {
+  .debate-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .input-row {
+    flex-wrap: wrap;
+  }
+  #send-button,
+  #Reset-button {
+    flex: 1;
+  }
+}
+</style>
+<div class="debate-wrapper">
+  <div id="chat-container" class="panel">
+    <h3>Chat</h3>
+    <div id="chat-box" class="chat-box"></div>
+    <div class="input-row">
+      <input id="user-input" placeholder="Type your message..." type="text">
+      <button id="send-button">Send</button>
+      <button id="Reset-button">Reset</button>
+    </div>
+    <button id="submit-button" style="margin-top: 10px;">
+      End Conversation
+    </button>
+  </div>
+</div>
