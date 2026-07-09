@@ -1,20 +1,44 @@
 # Talk2LLM_UI: A qualtrics-based plug-and-play experiment on Human-LLM interaction
 
-DebateLLM is a Qualtrics-based experimental paradigm for interactions with state-of-the-art LLMs. It requires little to no coding experience while allowing  for a wide variety of different experimental setups.
+Talk2LLM_UI is a Qualtrics-based experimental user interface for chat-like interactions with state-of-the-art LLMs. It requires little to no coding experience while allowing for a wide array of configurations. This includes a standalone chat, a chat with accompanying content on the side and a chat with an additional text editor (e.g., for studies foucssing on LLMs are writing assistants). Additional customization options further enable researchers to tailor the setup to their specific needs.
+
 
 ## Setup
-DebateLLM includes a [plug-and-play QSF file](www.downloadlink.com) that can be imported directly into Qualtrics. 
+Talk2LLM_UI includes a plug-and-play QSF file that can be imported directly into Qualtrics. 
+
 1. To import the downloaded file, please see [the official Qualtrics Documentation](https://www.qualtrics.com/support/survey-platform/survey-module/survey-tools/import-and-export-surveys/). 
 2. Setup the API Key
 - Register to [Openrouter](https://openrouter.ai/). 
 - Aquire credits (e.g., 25$). 
 - Create an API key. 
-- For security reasons, please make sure to set a reasonable limit for the API Key. DO NOT SKIP THIS STEP!
+- As API requests are transmitted on the client device, it is possible (although unlikly) for participants to access your API key. Therefore, please make sure to set a limit for the API key. DO NOT SKIP THIS STEP! 
 - After setting the limit, copy the API code, go to the Qualtrics survey flow and past the key in the embedded data field "OpenRouterAPIKey".
+3. Preview the experiment and check basic functionality.
 
 ## Usage
 After following the steps outlined above the experiment is ready to use. However, multiple customization options are available, including the model, response prompts, evaluation prompts or the order of interaction. Please see the documentation for this. 
 
+1. Configuration
+The three configurations are available as seperate blocks within the downloadable qualtrics file. Simply delete those blocks not relevant for your setup.
+
+- Chat_Only: This configuration includes the chat only.
+- Chat_Content: This configuration includes a sidepanel on the left with additional content (e.g., texts or a Stimulus).
+- Chat_Editor: This configuration includes a rudimentary text editor on the left and the option to submit the text (e.g., to study how LLM-support impacts writing). 
+
+2. Customization
+There is a series of variables that are embedded via Qualtrics. Adapting these variables changes the setup:
+
+ - OpenRouterAPIKey: Key via OpenRouter.  
+ - SetModel: Model Identifier from OpenRouter. 
+ - SystemPrompt: System Prompt for the Model. 
+ - minimumInteractionTime_seconds: Sets a time requirement in seconds; users can proceed only when requirement is met. 
+ - minimumInteractionCount: Sets an interaction count requirement; users can proceed only when requirement is met. 
+ - ContentFieldTitle & ContentFieldInput: Allows users to specifiy content for the content configuration
+ - EvaluationNecessary: 1 or 0; if 1 initiates a LLM-driven evaluation for every LLM-generated response and regenerates a new response if initial response does not fulfil the requirements set in the EvaluationPrompt
+ - EvaluationPrompt: Prompt to check LLM-generated response; the output of this Prompt must be NO or YES; only NO allows the response to be presented to the participant. 
+ - LLMinitiates: 1 or 0; if 1 the model will generate a response first. 
+ - LLMinitiates_StartPrompt: Sets the first prompt necessary for the model to initiate the conversation. 
+ - LLMinitiates_Visible: 1 or 0; if 1 LLMinitiates_StartPrompt will be visible to the participant."
 
 ## Contributing
 
@@ -25,4 +49,4 @@ Please make sure to update tests as appropriate.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+Apache-2.0
