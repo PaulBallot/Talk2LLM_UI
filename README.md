@@ -4,7 +4,7 @@ Talk2LLM_UI is a Qualtrics-based experimental user interface for chat-like inter
 
 
 ## Setup
-Talk2LLM_UI includes a plug-and-play QSF file that can be imported directly into Qualtrics. 
+Talk2LLM_UI includes a plug-and-play QSF file that can be imported directly into Qualtrics. The following steps guide you to setting up your experiment. 
 
 1. To import the downloaded file, please see [the official Qualtrics Documentation](https://www.qualtrics.com/support/survey-platform/survey-module/survey-tools/import-and-export-surveys/). 
 2. Setup the API Key
