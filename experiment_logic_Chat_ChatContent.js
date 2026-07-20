@@ -20,7 +20,7 @@ Qualtrics.SurveyEngine.addOnload(function()
 
   // Requirements
   var minimumInteractionCount = Qualtrics.SurveyEngine.getEmbeddedData('minimumInteractionCount');
-  var minimumInteractionTime = Qualtrics.SurveyEngine.getEmbeddedData('minimumInteractionTime');
+  var minimumInteractionTime = Qualtrics.SurveyEngine.getEmbeddedData('minimumInteractionTime_seconds');
   
   // Evaluation
   var EvaluationNecessary = Qualtrics.SurveyEngine.getEmbeddedData('EvaluationNecessary');
