@@ -203,6 +203,11 @@ async function TriggerOpenrouterRequest() {
   if (currentEvaluation === "NO"){
     appendMessage("bot", currentMessage);
   }
+  if (currentEvaluation != "NO" && currentAttempt == attemptLimit)
+  {
+    console.log("Error: final evaluation result was " + currentEvaluation + " for the following message: " + currentMessage);
+    alert("An evaluation error occured. Please contact the responsible researchers."); 
+  }
 }
   /**
  * Sends request to OpenRouter API
