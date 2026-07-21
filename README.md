@@ -4,6 +4,10 @@ Talk2LLM_UI is a Qualtrics-based experimental user interface for chat-like inter
 
 <img src="images/Screenshot_Chat%20Configuration.png" alt="Screenshot from the Chat Setup" height="300">
 
+<img src="images/Screenshot_Chat%20Configuration.png" alt="Screenshot from the Chat Setup" height="200">
+<img src="images/Screenshot_Chat+Content.png" alt="Screenshot from the Chat Setup" height="200">
+<img src="images/Screenshot_Chat+Editor.png" alt="Screenshot from the Chat Setup" height="200">
+
 ## Setup
 Talk2LLM_UI includes a plug-and-play QSF file that can be imported directly into Qualtrics. The following steps guide you to setting up your experiment. 
 
