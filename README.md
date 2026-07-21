@@ -2,7 +2,7 @@
 
 Talk2LLM_UI is a Qualtrics-based experimental user interface for chat-like interactions with state-of-the-art LLMs. It requires little to no coding experience while allowing for a wide array of configurations. This includes a standalone chat, a chat with accompanying content on the side and a chat with an additional text editor (e.g., for studies foucssing on LLMs are writing assistants). Additional customization options further enable researchers to tailor the setup to their specific needs.
 
-![Screenshot from the Chat Setup](images/Screenshot_Chat%20Configuration.png)
+![Screenshot from the Chat Setup](images/Screenshot_Chat%20Configuration.png =250x)
 
 ## Setup
 Talk2LLM_UI includes a plug-and-play QSF file that can be imported directly into Qualtrics. The following steps guide you to setting up your experiment. 
