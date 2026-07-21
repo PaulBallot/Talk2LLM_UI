@@ -63,13 +63,13 @@ Only relevant for the editor configuration:
  - ArticleMinimumLength: Minimum length for text input in editor configuration.
  - ContentFieldTitle & ContentFieldInput: Allows users to specify content for the content configuration
 
+## Ethical Considerations & Data Flow
+During this experiment conversation data will leave Qualtrics to be processed (and potentially stored) by both OpenRouter and the provider of the specific model chosen. This can have legal and ethical implications and should be discussed with your IRB and your data management advisors. To minimize potential harms, we recommend you to toggle the [Zero Data Retention policy](https://openrouter.ai/settings/privacy) in OpenRouter, deactivate [Input & Output Logging](https://openrouter.ai/workspaces/default/observability) and advise participants not to share any identifiable information. 
 
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 
